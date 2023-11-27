@@ -68,3 +68,29 @@ while i<100:
 else:
     print('Koniec')
 
+    i = int(input("podaj liczbę naturalną"))
+    while i % 10 + i // 10:
+        print('Liczba')
+
+
+liczba = input("Podaj liczbe")
+
+suma_liczb = 0
+for g in liczba:
+
+    suma_liczb += int(g)
+
+print(f"suma liczby{liczba} wynosi:{suma_liczb}")
+
+
+
+
+n = int(input("Podaj liczbę:"))
+print(f'Podałeś liczbę {n}')
+
+suma = 0
+while n > 0:
+    suma += n % 10
+    n //= 10
+
+print(suma)
