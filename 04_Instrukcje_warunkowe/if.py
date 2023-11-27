@@ -37,7 +37,7 @@ if (n == 17) or (n != 17):
 
 
 # := "Walrus" operator
-if (i := int(input("podaj liczbę naturalną"))) % 2 == 0:
+if (i := int(input("podaj liczbę naturalną"))) % 2 == 0: #i bedzie nie liczba ale albo true albo false i musze dodac kolejny nawias aby byl liczba
     print(f'{i} jest parzyste')
 else:
     print(f'{i} jest nieparzyste')
