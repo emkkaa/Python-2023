@@ -45,9 +45,9 @@ else:
 i = int(input("podaj liczbę naturalną"))
 suma_cyfr = (i % 10 + i // 10)
 if (suma_cyfr % 7 == 0) and (i % 2 == 0):
-    print(f'Dobra liczba')
+    print('Dobra liczba')
 else:
-    print(f'Zła liczba')
+    print('Zła liczba')
 
 
 
