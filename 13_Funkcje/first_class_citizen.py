@@ -2,8 +2,8 @@ def print_log(message):
     print(message)
 
 
-def noop_log(message):
-    pass
+def noop_log(message): #noł op log
+    pass #sluzy do zaznaczania pustego bloku, pozwala zrobic wciecie, pozwala stworzyc pusty blok
 
 
 def get_log(mode):
