@@ -27,6 +27,7 @@ list(range(10))
 
 [x+6 for x in range (10)]
 
+
 #zadanie
 #Stworzyć list comprehension tupli składających się z w/w liczb całkowitych i ich reprezentacji jako napis
 #np. [(1, "1"), (2, "2")]
