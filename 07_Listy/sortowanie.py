@@ -1,4 +1,4 @@
-lista = list(range(10, 0, -1))
+lista = list(range(10, 0, -1)) #jezeli ujemny krok to bedzie lista malejaca
 lista
 lista.sort()
 lista
