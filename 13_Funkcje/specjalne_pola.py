@@ -1,5 +1,5 @@
 def f():
-    """
+    """ # doc string, help()
     Ta funkcja wypisuje 'OK'
     :return: nothing
     """
