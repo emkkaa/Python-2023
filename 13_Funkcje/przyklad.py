@@ -108,3 +108,19 @@ klucz = input("Podaj klucz")
 
 funkcja = slownik[klucz]
 print(funkcja(2))
+
+
+# zadanie
+# stworzyc funckcję alphabet_range działająca jak range ale dla liter (z trzema parametrami - start, end, step)
+# przykład: alphabet_range('E') -> ['A', 'B', 'C', 'D'] - albo jeszcze lepiej generator
+# użyć
+# ord - podaje kod calkowity danego znaku
+# chr - podaje znak odpowiadający danemu kodowi całkowitemu
+
+
+def alphabet_range(end="Z", step=1, start="A"):
+    return (chr(x) for x in range(ord(start), ord(end), step))
+
+
+for i in alphabet_range('E'):
+    print(i)
