@@ -47,7 +47,7 @@ t = give_a_and_b()
 t
 
 int("10")
-int("10", base=2)
+int("10", base=2) #układ dwujkowy 1 0 czyli 2
 
 int("10", base=16)
 
@@ -70,4 +70,4 @@ def choinka(poziom, separator=" ", znak="*"):
 
 
 choinka(5)
-choinka(znak='#', poziom=6)
+choinka(znak='#', poziom=6)  #klucz znak , wartosc poziom
