@@ -43,7 +43,7 @@ s2.join(["Ala", "ma", "kota"])
 
 '.' in s2
 
-#zadanie
+#zadanie1
 
 napisy = []
 
@@ -55,4 +55,46 @@ while True:
 
     napisy.append(napis)
 
+print(sorted(napisy))
+
+
+napisy = []
+
+while True:
+    napis = input("Wprowadź dowolne słowo: ")
+
+    if not napis:
+        break
+
+    napisy.append(napis)
+
+napisy.sort()
 print(napisy)
+
+#zadanie2
+
+l = []
+while True:
+    liczba = input("Podaj liczbę, a dodam ją do listy: ").strip()
+    if liczba == "":
+        break
+    l.append(int(liczba))
+l.sort()
+for i in range(1, len(l)):
+    if l[-1*i]%2 == 0:
+        print(f"Ostatnia parzysta liczba to: {l[-1*i]}")
+        break
+
+#################################
+
+liczby = []
+
+while True:
+    liczba = input("Wprowadź dowolną liczbę: ")
+
+    if not liczba:
+        break
+
+    liczby.append(liczba)
+
+print()
