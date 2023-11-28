@@ -10,13 +10,17 @@ z
 z2 = {'a', 'b', 'c', 'd'}
 z < z2
 z3 = {'d', 'e'}
-z | z3
+z | z3 #suma zbiorów
 z & z2
 z & z3
-z2 - z
-z2 ^ z3
+z2 - z #mozemy odejmowac zbiory
+z2 ^ z3 #roznica symetryczna
 
-slownik = {z: 3}  # Błąd
-fz = frozenset(z)
+z3.add('z') #dodaawanie elementu do zbioru
+
+slownik = {z: 3}  # Błąd to jest zmienne i nie moze byc kluczem w slowniku
+fz = frozenset(z) #zamrozony zbior - po zamrozeniu zbior zmianie ulec nie moze
 slownik = {fz: 3}
 slownik
+
+#błąd TypeError: unhashable type: 'set'
