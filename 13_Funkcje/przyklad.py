@@ -71,3 +71,40 @@ def choinka(poziom, separator=" ", znak="*"):
 
 choinka(5)
 choinka(znak='#', poziom=6)  #klucz znak , wartosc poziom
+
+
+
+# zadanie
+# stworzyc słownik { 'first': funkcja1, 'second': funkcja2 }, wczytać przez input klucz, wywołać funkcję
+
+
+def dodaj3(x):
+    wynik = x + 2
+    return wynik
+
+def dodaj4(x):
+    wynik = x + 3
+    return wynik
+
+slownik = { 'first': dodaj3, 'second': dodaj4 }
+
+t = input('Podaj klucz')
+funkcja = slownik[t]
+print(funkcja(4))
+
+############################
+
+def funkcja1(x):
+    suma = 1 +1
+    return suma
+
+def funkcja2(x):
+    roznica = 4 - 3
+    return roznica
+
+slownik = { 'first': funkcja1, 'second': funkcja2 }
+
+klucz = input("Podaj klucz")
+
+funkcja = slownik[klucz]
+print(funkcja(2))
