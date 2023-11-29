@@ -9,3 +9,4 @@ if __name__ == '__main__': #tutaj glowny kod programu
         print(traceback.format_exc())
     except Exception as e:
         print(e)
+
