@@ -1,9 +1,9 @@
 ###################
-# Monkey patching #
+# Monkey patching # mozna rozszerzyc rzeczy badz podmienic na wlasne
 ###################
 
 class A():
-    def f(self):
+    def f(self): #w locie podmiana funkcji na inna
         return 1
 
 
@@ -11,11 +11,11 @@ a = A()
 a.f()
 
 
-def f(x):
+def f(x): #to ta co wyzej tylko inna
     return -1
 
 
-A.f = f
+A.f = f #musze podmienic w klasie nie na obiekcie
 
 a.f()
 
