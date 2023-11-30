@@ -109,3 +109,32 @@ reka.sort()
 reka
 
 str(spades_ace)
+
+
+# Stworzyć klasę FoodItem z polami id, price item - specjalnymi metodami __init__ i __repr__, stworzyć listę FoodItem na podstawie pliku CSV
+
+
+import csv
+from pprint import pprint
+
+
+
+class FoodItem:
+    def __init__(self, item_id, price, item):
+        self.id = item_id
+        self.price = float(price)
+        self.item = item
+
+    def __repr__(self):
+        return f'FoodItem("{self.id}", "{self.price}", "{self.item}")'
+
+    food_list = []
+
+    with open('foods.csv') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            food_list.append(FoodItem(item_id=row['Food ID'], item_name=row['Food Item'], price=row['Price']))
+
+    pprint(food_list)
+
+    print(os.getcwd())
