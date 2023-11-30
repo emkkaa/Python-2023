@@ -7,7 +7,7 @@ db_url = "postgresql+psycopg2://my_user:secret@127.0.0.1/my_database"
 engine = create_engine(db_url)
 
 # reflect the tables
-Base.prepare(engine, reflect=True)
+Base.prepare(engine, reflect=True) #przygotowuje baze
 
 # mapped classes are now created with names by default
 # matching that of the table name.
