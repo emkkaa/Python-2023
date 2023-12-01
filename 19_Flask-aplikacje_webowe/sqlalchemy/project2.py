@@ -23,6 +23,14 @@ class Tag(db.Model):
         return '<User %r>' % self.tagname
 
 
+class Note(db.Model):
+    note_id = db.Column(db.Integer, primary_key=True)
+    notename = db.Column(db.String(80), unique=True, nullable=False)
+
+    def __repr__(self):
+        return '<User %r>' % self.tagname
+
+
 def get_tags(session):
     return session.query(Tag).all()
 
@@ -82,6 +90,5 @@ def remove():
 
     return render_template('form77.html', data=get_tags(db.session),
                            tytul="Usunieto tag")
-
 
 
