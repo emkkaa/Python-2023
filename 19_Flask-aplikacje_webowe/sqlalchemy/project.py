@@ -28,10 +28,16 @@ def get_tags(session):
 
 
 def create_tag(tagname, session):
-    tag = Tag(tagname=tagname)
-    session.add(tag)
-    session.commit()
-
+    try:
+        tag = Tag(tagname=tagname)
+        session.add(tag)
+        session.commit()
+    except sqlalchemy.exc.IntegrityError as e:
+        print(e)
+        session.rollback()
+        return False
+    else:
+        return True
 
 def remove_tag(tagname, session):
     try:
@@ -49,22 +55,24 @@ def remove_tag(tagname, session):
 
 @app.route('/')
 def hello():
-    return render_template('form.html', data=get_tags(db.session),
+    return render_template('form77.html', data=get_tags(db.session),
                            tytul="Tags", no_error=True)
 
 
 @app.route('/add')
 def add():
     args = request.args
-    no_error = create_tag(args["name"], db.session)
+    no_error = create_tag(args["tag"], db.session)
     if no_error:
         tytul = "Dodano tag"
     else:
         tytul = "Taki tag już istnieje"
 
-    return render_template('form.html', data=get_tags(db.session),
+    return render_template('form77.html', data=get_tags(db.session),
                            no_error=no_error,
                            tytul=tytul)
+
+
 
 
 @app.route('/remove')
@@ -72,5 +80,5 @@ def remove():
     args = request.args
     remove_tag(args["tag"], db.session)
 
-    return render_template('form.html', data=get_tags(db.session),
+    return render_template('form77.html', data=get_tags(db.session),
                            tytul="Usunieto tag")
