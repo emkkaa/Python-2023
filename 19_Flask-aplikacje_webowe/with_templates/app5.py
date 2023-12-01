@@ -1,5 +1,5 @@
 # flask --app app run
-#
+# w ajki sposob te dane sa przesylane z formularza
 from flask import Flask, render_template, request
 
 app = Flask(__name__)

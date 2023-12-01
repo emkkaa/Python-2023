@@ -58,3 +58,8 @@ def add():
     return render_template('form.html', data=get_users(db.session),
                            no_error=no_error,
                            tytul=tytul)
+
+
+
+
+
